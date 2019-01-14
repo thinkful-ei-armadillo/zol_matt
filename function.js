@@ -1,10 +1,12 @@
+'use strict';
+
 function createGreeting(name, age){
     return `Hello, My name is ${name}, I am ${age} years old.`;
 }
 
 function getYearOfBirth(age){
-    let yearOfBirth = 2019 - age;
-    if (typeof age !== "number"){
+  let yearOfBirth = 2019 - age;
+  if (typeof age !== "number"){
         throw new Error("Age must be a number");
     } else if (age < 0) {
         throw new Error("Age can not be negative")
@@ -14,14 +16,13 @@ function getYearOfBirth(age){
 }
 
 try {
-    const greeting1 = createGreeting();
+    const greeting1 = getYearOfBirth(-1);
     console.log(greeting1);
 } catch(e) {
     console.log(e);
 }
 
-// const greeting1 = createGreeting();
-// console.log(greeting1);
 
-createGreeting("John", 25);
-getYearOfBirth(12);
+
+console.log(createGreeting("John", -1));
+console.log(getYearOfBirth(12));
