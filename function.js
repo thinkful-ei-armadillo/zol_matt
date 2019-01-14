@@ -24,10 +24,9 @@ try {
     console.log(e);
 }
 
-<<<<<<< HEAD
 createGreeting("John", 25);
 getYearOfBirth(12);
-=======
+
 // function drills 2
 
 function jediName(first,last){
@@ -35,4 +34,23 @@ function jediName(first,last){
 }
 
 console.log(jediName('matt','smith'));
->>>>>>> 3b6b5eab83ca74db43e0202ef3f52235091b4ca0
+
+fucntion beyond(num){
+    if (num === Infinity || num === Number.NEGATIVE_INFINITY ){
+        console.log("And beyond");
+    } else if (num > 0 && num < Infinity){
+        console.log("To infinity");
+    } else if (num < 0 && num > Number.NEGATIVE_INFINITY){
+        console.log("To negative infinity")
+    } else {
+        console.log("Staying home")
+    }
+}
+
+console.log(beyond(2));
+
+function decode (code){
+    
+}
+
+
