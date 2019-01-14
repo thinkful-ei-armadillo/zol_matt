@@ -1,5 +1,7 @@
 'use strict';
 
+// function drill 1
+
 function createGreeting(name, age){
     return `Hello, My name is ${name}, I am ${age} years old.`;
 }
@@ -16,13 +18,16 @@ function getYearOfBirth(age){
 }
 
 try {
-    const greeting1 = getYearOfBirth(-1);
+    const greeting1 = getYearOfBirth('-1');
     console.log(greeting1);
 } catch(e) {
     console.log(e);
 }
 
+// function drills 2
 
+function jediName(first,last){
+  return `${last.slice(0,3)}${first.slice(0,2)}`; 
+}
 
-console.log(createGreeting("John", -1));
-console.log(getYearOfBirth(12));
+console.log(jediName('matt','smith'));
