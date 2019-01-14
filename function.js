@@ -3,25 +3,25 @@
 // function drill 1
 
 function createGreeting(name, age){
-  return `Hello, My name is ${name}, I am ${age} years old.`;
+    return `Hello, My name is ${name}, I am ${age} years old.`;
 }
 
 function getYearOfBirth(age){
   let yearOfBirth = 2019 - age;
   if (typeof age !== "number"){
-    throw new Error("Age must be a number");
-  } else if (age < 0) {
-    throw new Error("Age can not be negative")
-  } else {
+        throw new Error("Age must be a number");
+    } else if (age < 0) {
+        throw new Error("Age can not be negative")
+    } else {
     return `I was born in ${yearOfBirth}`;
-  }
+    }
 }
 
 try {
-  const greeting1 = getYearOfBirth('-1');
-  console.log(greeting1);
+    const greeting1 = getYearOfBirth('-1');
+    console.log(greeting1);
 } catch(e) {
-  console.log(e);
+    console.log(e);
 }
 
 createGreeting("John", 25);
@@ -72,8 +72,18 @@ function decode(code){
 
 console.log(decode('craft block argon meter bells brown croon droop'));
 
-//function leapYear(month,leapyear=false){
+function leapYear(month, leapYear){
+    switch(month){
+        case 'April':
+        case 'June':
+        case 'September':
+        case 'November':
+            return `${month} has 30 days`;
+        case 'February':
+            return leapYear ? `${month} has 29 days` : `${month} has 28 days`;     
+        default:
+            return `${month} has 31 days`;
+    } 
+}
 
-    
-
-//}
+console.log(leapYear("February", false));
