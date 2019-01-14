@@ -58,11 +58,11 @@ function decode(code){
   for(let i = 0; i < string1.length; i++){
     if(string1[i][0] === 'a')
       newString+=string1[i][1]; 
-    if(string1[i][0] === 'b' )
+    else if(string1[i][0] === 'b' )
       newString+=string1[i][2];
-    if(string1[i][0] === 'c' )
+    else if(string1[i][0] === 'c' )
       newString+=string1[i][3];
-    if(string1[i][0] === 'd' )
+    else if(string1[i][0] === 'd' )
       newString+=string1[i][4];
     else    
       newString+=space;            
@@ -72,3 +72,8 @@ function decode(code){
 
 console.log(decode('craft block argon meter bells brown croon droop'));
 
+//function leapYear(month,leapyear=false){
+
+    
+
+//}
