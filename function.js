@@ -35,22 +35,40 @@ function jediName(first,last){
 
 console.log(jediName('matt','smith'));
 
-fucntion beyond(num){
+function beyond(num)
+{
     if (num === Infinity || num === Number.NEGATIVE_INFINITY ){
         console.log("And beyond");
     } else if (num > 0 && num < Infinity){
         console.log("To infinity");
     } else if (num < 0 && num > Number.NEGATIVE_INFINITY){
-        console.log("To negative infinity")
+        console.log("To negative infinity");
     } else {
-        console.log("Staying home")
+        console.log("Staying home");
     }
 }
 
 console.log(beyond(2));
 
-function decode (code){
+function decode(code){
+    let string1 = code.split(' ');
+    let newArr = [];
+    let space = ' ';
     
+    for(let i = 0; i < string1.length; i++){
+        if(string1[i][0] === 'a' )
+            newArr.push(string1[i][1]); 
+        if(string1[i][0] === 'b' )
+            newArr.push(string1[i][2]);
+        if(string1[i][0] === 'c' )
+            newArr.push(string1[i][3]);
+        if(string1[i][0] === 'd' )
+            newArr.push(string1[i][4]);
+        else    
+            newArr.push(space);            
+    }    
+    return newArr.join(' ');
 }
 
+console.log(decode('craft block argon meter bells brown croon droop'));
 
