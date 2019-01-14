@@ -72,8 +72,70 @@ function decode(code){
 
 console.log(decode('craft block argon meter bells brown croon droop'));
 
-//function leapYear(month,leapyear=false){
+function leapYear(month,leapyear=false){
 
+  switch (month) {
+  case 'January':
+  case 'March':
+  case 'May':
+  case 'July':
+  case 'August':
+  case 'October':
+  case 'December':
+    console.log(`${month} has 31 days`);
+    break;
+  case 'February':
+    if(leapYear ===false)
+      console.log(`${month} has 28 days.`);
+    else
+      console.log(`${month} has 29 days.`);
+    break;
     
+  default:
+    console.log(`${month} has 30 days.`);
+    break;
+  }
+}
 
-//}
+console.log(leapYear('February',true));
+
+//rock1 paper2 scissors3
+
+function computerPick(){
+  return Math.floor(Math.random() * 3) + 1;
+}
+
+function game(num){
+  let computer = computerPick();
+  console.log(computer);
+  if((num<0 || num>4) || typeof(num) !== 'number'){
+    throw new Error('This is not a valid input');
+  }
+  else{
+  switch(num){
+    case 1:
+      if(computer ===2)
+        console.log('Computer wins!');
+      else if(computer ===3)
+        console.log('You win!');
+    break;
+    case 2:
+    if(computer ===3)
+        console.log('Computer wins!');
+      else if(computer ===1)
+        console.log('You win!');
+    break;
+    case 3:
+    if(computer ===1)
+        console.log('Computer wins!');
+      else if(computer ===2)
+        console.log('You win!');
+    break;
+    default:
+    console.log('It\'s a tie!');
+    break;
+  }
+}
+}
+
+console.log(game(1));
