@@ -20,8 +20,5 @@ try {
     console.log(e);
 }
 
-// const greeting1 = createGreeting();
-// console.log(greeting1);
-
 createGreeting("John", 25);
 getYearOfBirth(12);
